@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "famdvd_recent_available",
+    "name": "colecioneclassi_recent_updated",
     "datasource": {
       "name": "Collectors Channel - Atlas",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Recent Available",
+    "pageId": "Recent Updated",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -31,7 +31,7 @@
           "data": "{\n  \"find\": \"famdvd\",\n  \"filter\": {\n    \"cover_url\": \"https://www.famdvd.com.br/media/catalog/product/cache/1/small_image/275x400/9df78eab33525d08d6e5fb8d27136e95/8/e/8ebe9c4ee2.jpg\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
         },
         "collection": {
-          "data": "famdvd"
+          "data": "colecioneclassicos"
         },
         "command": {
           "data": "FIND"
@@ -62,7 +62,7 @@
             "data": "{price: {$ne : \"Indisponível\"}}"
           },
           "limit": {
-            "data": "50"
+            "data": "{{ResultSize.value}}"
           },
           "sort": {
             "data": "{\"timestamp\": -1}"
@@ -96,17 +96,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.find.limit.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "ResultSize.value"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Recent Available_famdvd_recent_available",
+  "id": "Recent Updated_colecioneclassi_recent_updated",
   "deleted": false,
-  "gitSyncId": "62be2e3d612750023eb00863_62be37b5612750023eb00996"
+  "gitSyncId": "62be2e3d612750023eb00863_62be4a51612750023eb00c8f"
 }

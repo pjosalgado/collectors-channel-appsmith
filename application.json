@@ -1,11 +1,11 @@
 {
   "pages": [
     {
-      "id": "Recent Available",
+      "id": "Recent Updated",
       "isDefault": true
     },
     {
-      "id": "Page1",
+      "id": "Title Type Count",
       "isDefault": false
     }
   ],
