@@ -1,0 +1,387 @@
+{
+  "unpublishedPage": {
+    "name": "Recent Available",
+    "slug": "recent-available",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1320,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 59,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "isVisibleDownload": true,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 4,
+              "isSortable": true,
+              "type": "TABLE_WIDGET",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "childStylesheet.button.buttonColor"
+                },
+                {
+                  "key": "childStylesheet.button.borderRadius"
+                },
+                {
+                  "key": "childStylesheet.menuButton.menuColor"
+                },
+                {
+                  "key": "childStylesheet.menuButton.borderRadius"
+                },
+                {
+                  "key": "childStylesheet.iconButton.buttonColor"
+                },
+                {
+                  "key": "childStylesheet.iconButton.borderRadius"
+                },
+                {
+                  "key": "primaryColumns.cover_url.computedValue"
+                },
+                {
+                  "key": "primaryColumns.price.computedValue"
+                },
+                {
+                  "key": "primaryColumns._id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.title.computedValue"
+                },
+                {
+                  "key": "primaryColumns.title_type.computedValue"
+                },
+                {
+                  "key": "primaryColumns.url.computedValue"
+                },
+                {
+                  "key": "primaryColumns.timestamp.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "delimiter": ",",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "primaryColumnId": "_id",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "cover_url": 67,
+                "title": 490,
+                "title_type": 114,
+                "price": 128,
+                "timestamp": 167.00000000000003,
+                "url": 303
+              },
+              "widgetName": "FamDVD_Recent_Available",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "cover_url",
+                "title",
+                "title_type",
+                "price",
+                "url",
+                "timestamp",
+                "_id"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "searchTags": [
+                "datagrid"
+              ],
+              "bottomRow": 36,
+              "parentRowSpace": 10,
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "primaryColumns.cover_url.onClick"
+                }
+              ],
+              "primaryColumns": {
+                "appsmith_mongo_escape_id": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "_id",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow._id))}}",
+                  "cellBackground": ""
+                },
+                "cover_url": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "cover_url",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "image",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Cover",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.cover_url))}}",
+                  "cellBackground": "",
+                  "iconName": "",
+                  "onClick": ""
+                },
+                "price": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "price",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Price (in BRL)",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.price))}}",
+                  "cellBackground": "",
+                  "iconName": ""
+                },
+                "title": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "title",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Title",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.title))}}",
+                  "cellBackground": ""
+                },
+                "title_type": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "title_type",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Type",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.title_type))}}",
+                  "cellBackground": ""
+                },
+                "url": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "url",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "url",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Page",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.url))}}",
+                  "cellBackground": "",
+                  "iconName": ""
+                },
+                "timestamp": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "timestamp",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Updated at (UTC-3)",
+                  "computedValue": "{{FamDVD_Recent_Available.sanitizedTableData.map((currentRow) => ( currentRow.timestamp))}}",
+                  "cellBackground": "",
+                  "iconName": "",
+                  "inputFormat": "YYYY-MM-DDTHH:mm:ss",
+                  "outputFormat": "DD/MM/YYYY HH:mm"
+                }
+              },
+              "key": "1ez66a3nef",
+              "derivedColumns": {},
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "textSize": "0.875rem",
+              "widgetId": "dd7bhcwh9p",
+              "tableData": "{{famdvd_recent_available.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "widgetName": "FamDVD_Title",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph"
+              ],
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 14.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "Fam DVD",
+              "key": "l3j41v25by",
+              "isDeprecated": false,
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "widgetId": "m9uzsuddk4",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "fontSize": "1rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Recent Available_famdvd_recent_available",
+              "name": "famdvd_recent_available",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "mongoEscapedWidgetNames": [
+          "FamDVD_Recent_Available"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Recent Available",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "62be2e3d612750023eb00863_62be2e3d612750023eb00865"
+}
