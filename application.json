@@ -15,10 +15,10 @@
   "color": "#F5D1D1",
   "icon": "book",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "TABLET_LARGE"
   },
   "publishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "TABLET_LARGE"
   },
   "evaluationVersion": 2,
   "applicationVersion": 2,
