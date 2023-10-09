@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "theoriginals_title_type_count",
+    "name": "colecioneclassi_recent_updated",
     "datasource": {
       "name": "Collectors Channel - Atlas",
       "pluginId": "mongo-plugin",
@@ -13,28 +13,29 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Title Type Count",
+    "pageId": "Recent Updated",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
           "limit": {
-            "data": ""
+            "data": "10"
           },
           "arrayPipelines": {
-            "data": "[{\n    $sort: {\n        title_type: 1\n    }\n}, {\n    $group: {\n        _id: '$title_type',\n        count: {\n            $count: {}\n        }\n    }\n}, {\n    $match: {\n        _id: {\n            $in: [\n                'DVD',\n                'Blu-ray'\n            ]\n        }\n    }\n}]"
+            "data": ""
           }
         },
         "body": {
           "data": "{\n  \"find\": \"famdvd\",\n  \"filter\": {\n    \"cover_url\": \"https://www.famdvd.com.br/media/catalog/product/cache/1/small_image/275x400/9df78eab33525d08d6e5fb8d27136e95/8/e/8ebe9c4ee2.jpg\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
         },
         "collection": {
-          "data": "theoriginals"
+          "data": "colecioneclassicos"
         },
         "command": {
-          "data": "AGGREGATE"
+          "data": "FIND"
         },
         "count": {
           "query": {
@@ -59,13 +60,13 @@
         },
         "find": {
           "query": {
-            "data": ""
+            "data": "{price: {$ne : \"Indisponível\"}}"
           },
           "limit": {
-            "data": "50"
+            "data": "{{ResultSize.value}}"
           },
           "sort": {
-            "data": ""
+            "data": "{\"timestamp\": -1}"
           },
           "skip": {
             "data": ""
@@ -96,17 +97,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.find.limit.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "ResultSize.value"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Title Type Count_theoriginals_title_type_count",
+  "id": "Recent Updated_colecioneclassi_recent_updated",
   "deleted": false,
-  "gitSyncId": "62be2e3d612750023eb00863_62be5c14612750023eb00f8d"
+  "gitSyncId": "62be2e3d612750023eb00863_62be4a51612750023eb00c8f"
 }

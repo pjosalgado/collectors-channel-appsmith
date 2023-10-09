@@ -20,6 +20,8 @@
   "publishedAppLayout": {
     "type": "TABLET_LARGE"
   },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,

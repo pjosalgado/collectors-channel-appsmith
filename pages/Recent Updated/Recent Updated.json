@@ -1,0 +1,104 @@
+{
+  "unpublishedPage": {
+    "name": "Recent Updated",
+    "slug": "recent-updated",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2000,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Recent Updated_amazon_recent_updated",
+              "name": "amazon_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recent Updated_colecioneclassi_recent_updated",
+              "name": "colecioneclassi_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recent Updated_famdvd_recent_updated",
+              "name": "famdvd_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recent Updated_theoriginals_recent_updated",
+              "name": "theoriginals_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recent Updated_videoperola_recent_updated",
+              "name": "videoperola_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "mongoEscapedWidgetNames": [
+          "Amazon_Data",
+          "ColecioneClassicos_Data",
+          "FamDVD_Data",
+          "TheOriginals_Data",
+          "VideoPerola_Data"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Recent Updated",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "62be2e3d612750023eb00863_62be2e3d612750023eb00865"
+}

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "famdvd_recent_updated",
+    "name": "versatil_title_type_count",
     "datasource": {
       "name": "Collectors Channel - Atlas",
       "pluginId": "mongo-plugin",
@@ -13,28 +13,26 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Recent Updated",
+    "pageId": "Title Type Count",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
           "limit": {
-            "data": "10"
+            "data": ""
           },
           "arrayPipelines": {
-            "data": ""
+            "data": "[{\n\t$sort: {\n\t\ttitle_type: 1\n\t}\n}, {\n\t$group: {\n\t\t_id: '$title_type',\n\t\tcount: {\n\t\t\t$count: {}\n\t\t}\n\t}\n}]"
           }
         },
-        "body": {
-          "data": "{\n  \"find\": \"famdvd\",\n  \"filter\": {\n    \"cover_url\": \"https://www.famdvd.com.br/media/catalog/product/cache/1/small_image/275x400/9df78eab33525d08d6e5fb8d27136e95/8/e/8ebe9c4ee2.jpg\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
-        },
         "collection": {
-          "data": "famdvd"
+          "data": "versatil"
         },
         "command": {
-          "data": "FIND"
+          "data": "AGGREGATE"
         },
         "count": {
           "query": {
@@ -58,25 +56,31 @@
           }
         },
         "find": {
-          "query": {
-            "data": "{price: {$ne : \"Indisponível\"}}"
-          },
-          "limit": {
-            "data": "{{ResultSize.value}}"
-          },
-          "sort": {
-            "data": "{\"timestamp\": -1}"
-          },
           "skip": {
             "data": ""
           },
+          "query": {
+            "data": "[{\n\t$sort: {\n\t\ttitle_type: 1\n\t}\n}, {\n\t$group: {\n\t\t_id: '$title_type',\n\t\tcount: {\n\t\t\t$count: {}\n\t\t}\n\t}\n}, {\n\t$match: {\n\t\t_id: {\n\t\t\t$in: [\n\t\t\t\t'DVD',\n\t\t\t\t'Blu-ray'\n\t\t\t]\n\t\t}\n\t}\n}]"
+          },
+          "sort": {
+            "data": ""
+          },
+          "limit": {
+            "data": ""
+          },
           "projection": {
-            "data": "{title: 1, title_type: 1, cover_url: 1, price: 1, url: 1, timestamp: 1}"
+            "data": ""
           }
         },
         "insert": {
           "documents": {
             "data": ""
+          }
+        },
+        "misc": {
+          "formToNativeQuery": {
+            "data": "{\n  \"aggregate\": \"versatil\",\n  \"pipeline\": [{\n\t$sort: {\n\t\ttitle_type: 1\n\t}\n}, {\n\t$group: {\n\t\t_id: '$title_type',\n\t\tcount: {\n\t\t\t$count: {}\n\t\t}\n\t}\n}],\n  \"cursor\": {}\n}\n",
+            "status": "SUCCESS"
           }
         },
         "smartSubstitution": {
@@ -96,23 +100,18 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.find.limit.data"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "ResultSize.value"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-10-09T15:07:19Z"
   },
-  "id": "Recent Updated_famdvd_recent_updated",
+  "id": "Title Type Count_versatil_title_type_count",
   "deleted": false,
-  "gitSyncId": "62be2e3d612750023eb00863_62be37b5612750023eb00996"
+  "gitSyncId": "6524142e020dd65051c54914_65241727478a5505c8227ee9"
 }

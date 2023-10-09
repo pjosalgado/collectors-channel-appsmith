@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "amazon_recent_updated",
+    "name": "videoperola_recent_updated",
     "datasource": {
       "name": "Collectors Channel - Atlas",
       "pluginId": "mongo-plugin",
@@ -18,6 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
           "limit": {
@@ -31,7 +32,7 @@
           "data": "{\n  \"find\": \"famdvd\",\n  \"filter\": {\n    \"cover_url\": \"https://www.famdvd.com.br/media/catalog/product/cache/1/small_image/275x400/9df78eab33525d08d6e5fb8d27136e95/8/e/8ebe9c4ee2.jpg\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
         },
         "collection": {
-          "data": "amazon"
+          "data": "videoperola"
         },
         "command": {
           "data": "FIND"
@@ -112,7 +113,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Recent Updated_amazon_recent_updated",
+  "id": "Recent Updated_videoperola_recent_updated",
   "deleted": false,
-  "gitSyncId": "62be2e3d612750023eb00863_62be4a4f612750023eb00c8d"
+  "gitSyncId": "62be2e3d612750023eb00863_62be4a4c612750023eb00c8b"
 }

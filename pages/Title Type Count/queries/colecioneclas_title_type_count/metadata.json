@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "videoperola_recent_updated",
+    "name": "colecioneclas_title_type_count",
     "datasource": {
       "name": "Collectors Channel - Atlas",
       "pluginId": "mongo-plugin",
@@ -13,28 +13,29 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Recent Updated",
+    "pageId": "Title Type Count",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
           "limit": {
-            "data": "10"
+            "data": ""
           },
           "arrayPipelines": {
-            "data": ""
+            "data": "[{\n\t$sort: {\n\t\ttitle_type: 1\n\t}\n}, {\n\t$group: {\n\t\t_id: '$title_type',\n\t\tcount: {\n\t\t\t$count: {}\n\t\t}\n\t}\n}]"
           }
         },
         "body": {
           "data": "{\n  \"find\": \"famdvd\",\n  \"filter\": {\n    \"cover_url\": \"https://www.famdvd.com.br/media/catalog/product/cache/1/small_image/275x400/9df78eab33525d08d6e5fb8d27136e95/8/e/8ebe9c4ee2.jpg\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
         },
         "collection": {
-          "data": "videoperola"
+          "data": "colecioneclassicos"
         },
         "command": {
-          "data": "FIND"
+          "data": "AGGREGATE"
         },
         "count": {
           "query": {
@@ -59,13 +60,13 @@
         },
         "find": {
           "query": {
-            "data": "{price: {$ne : \"Indisponível\"}}"
+            "data": ""
           },
           "limit": {
-            "data": "{{ResultSize.value}}"
+            "data": "50"
           },
           "sort": {
-            "data": "{\"timestamp\": -1}"
+            "data": ""
           },
           "skip": {
             "data": ""
@@ -96,23 +97,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.find.limit.data"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "ResultSize.value"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Recent Updated_videoperola_recent_updated",
+  "id": "Title Type Count_colecioneclas_title_type_count",
   "deleted": false,
-  "gitSyncId": "62be2e3d612750023eb00863_62be4a4c612750023eb00c8b"
+  "gitSyncId": "62be2e3d612750023eb00863_62be5c1a612750023eb00f92"
 }
