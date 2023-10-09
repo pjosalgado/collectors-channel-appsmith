@@ -1,0 +1,251 @@
+{
+  "unpublishedPage": {
+    "name": "Recently updated",
+    "slug": "recently-updated",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "topRow": 0,
+          "bottomRow": 2754.000000000001,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "minHeight": 1860,
+          "useAutoLayout": true,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "positioning": "vertical",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "containerStyle": "none",
+          "snapRows": 125,
+          "version": 86,
+          "responsiveBehavior": "fill",
+          "flexLayers": [
+            {
+              "children": [
+                {
+                  "id": "dmxi2jks8e",
+                  "align": "end"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "m9uzsuddk4",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "dd7bhcwh9p",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "e1g7oafcjt",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "j1hxz2weap",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "5agijzew9f",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "k2xbgcde6n",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "cbgpuvrzdr",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "cb90yv82ol",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "x6ueuhgja7",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "ldmjxa8isf",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "f90gymgiye",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "myyt1lj5sj",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "g7783j9zrp",
+                  "align": "start"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "id": "qpg3e7h1kx",
+                  "align": "start"
+                }
+              ]
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Recently updated_amazon_recent_updated",
+              "name": "amazon_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_colecioneclassi_recent_updated",
+              "name": "colecioneclassi_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_famdvd_recent_updated",
+              "name": "famdvd_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_imusicbr_recent_updated",
+              "name": "imusicbr_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_theoriginals_recent_updated",
+              "name": "theoriginals_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_versatil_recent_updated",
+              "name": "versatil_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Recently updated_videoperola_recent_updated",
+              "name": "videoperola_recent_updated",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "ResultSize.value"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "mongoEscapedWidgetNames": [
+          "Amazon_Data",
+          "ColecioneClassicos_Data",
+          "FamDVD_Data",
+          "TheOriginals_Data",
+          "TheOriginals_DataCopy",
+          "TheOriginals_DataCopyCopy",
+          "VideoPerola_Data"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Recently updated",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "62be2e3d612750023eb00863_62be2e3d612750023eb00865"
+}
