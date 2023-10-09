@@ -46,6 +46,6 @@
     "optionLabel": "label",
     "responsiveBehavior": "fill",
     "maxDynamicHeight": 9000,
-    "onOptionChange": "{{amazon_recent_updated.run()}}",
+    "onOptionChange": "{{amazon_recent_updated.run();\nvideoperola_recent_updated.run();\nfamdvd_recent_updated.run();\ntheoriginals_recent_updated.run();\ncolecioneclassi_recent_updated.run();\nimusicbr_recent_updated.run();\nversatil_recent_updated.run()}}",
     "minDynamicHeight": 4
 }
